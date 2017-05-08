@@ -43,6 +43,7 @@ open class JWZoomableLivePhotoView: UIView {
             DispatchQueue.main.async {
                 self.livePhotoView.livePhoto = self.livePhoto
                 if let photo = self.livePhoto {
+                    self.livePhotoView.transform = .identity
                     self.livePhotoView.frame = CGRect(x: 0, y: 0, width: photo.size.width, height: photo.size.height)
                 }
                 self.scrollView.contentSize = self.livePhotoView.bounds.size
